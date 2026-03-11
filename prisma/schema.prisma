@@ -1,0 +1,19 @@
+datasource db {
+    provider = "sqlite"
+}
+
+generator client {
+    provider = "prisma-client"
+    output   = "../prisma-client"
+}
+
+model Draw {
+    id       String @id
+    year     Int
+    number   Int
+    drawDate String
+    drawnAt  String
+
+    @@unique([year, number])
+    @@index([year])
+}
