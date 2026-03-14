@@ -1,5 +1,5 @@
-import './globals.css';
-import React from 'react';
+import "./globals.css";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -7,8 +7,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body className='bg-gray-100 p-10'>{children}</body>
+    <html lang="vi" suppressHydrationWarning>
+      <body
+        suppressHydrationWarning
+        className="bg-slate-100 p-6 text-slate-900 sm:p-10"
+      >
+        {children}
+      </body>
     </html>
   );
 }
